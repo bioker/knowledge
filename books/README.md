@@ -8,6 +8,7 @@
 ### [Refactoring](design/DESIGN-PATTERNS.md)
 ### [Mythical Man Month](design/MAN-MONTH.md)
 ### [Programms structure and interpretation](design/STRUCTURE-INTERPRETATION.md)
+### [Grokking algorithms](design/GROKKING-ALGORITHMS.md)
 ## Java SE
 ### [Thinking in Java](java-se/THINKING-JAVA.md)
 ### [Effective Java](java-se/EFFECTIVE-JAVA.md)
