@@ -19,6 +19,8 @@
 ### [Java EE Tutorial](java-ee/JAVA-EE-TUTOR.md)
 ### [Begingin Java EE](java-ee/BEGINING-JAVA-EE.md)
 ### [Well grounded Java development](java-ee/WELL-GROUNDED-JAVA-DEV.md)
+## JavaScript
+### [Eloquent JavaScript](js/ELOQUENT_JAVASCRIPT.md)
 ## NodeJS
 ### [NodeJS tutorial](nodejs/NODEJS-TUTOR.md)
 ### [Practical NodeJS](nodejs/PRACTICAL-NODEJS.md)
