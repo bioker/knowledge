@@ -20,6 +20,7 @@
 + Dependency Injection helps gluing classes and keep them independent
 + When class A need to use class B it dependent by him, for using you need to do 
     injection - through constructor or method setter, this is called dependency injection
++ Usually constructor using for mandatory dependencies and setters using for optional
 
 ### Aspect Oriented Programming (AOP)
 
