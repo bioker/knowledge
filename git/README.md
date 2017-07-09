@@ -2,4 +2,4 @@
 
 + [Back](../README.md)
 
-### [Configuration](README.md)
+### [Configuration](git.sh)
