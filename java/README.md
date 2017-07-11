@@ -2,9 +2,4 @@
 
 + [Back](../README.md)
 
-## JavaFX application components
-
-+ Stage
-    + Scene
-        + Container (VBox)
-            + Component (Button)
+## [Java EE](ee/README.md)
