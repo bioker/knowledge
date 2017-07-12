@@ -6,3 +6,7 @@ git config --global alias.datehist "log --pretty='format:%C(auto)%h %Cred%cd%Cre
 git config --global core.autocrlf input
 git config --global core.quotepath false
 git config --global push.default simple
+git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
+git config --global mergetool.prompt false
