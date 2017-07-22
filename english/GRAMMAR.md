@@ -100,3 +100,5 @@
 				+ будущее - I will be heared and understooded - меня услышат и поймут - will be - 3 форма
 			+ [Р],[Д]
 				+ настоящее I have been heared and understooded - уже 5 лет меня слышат и понимают - have been - 3 форма
+
+## [Вопросы](questions/README.md)
