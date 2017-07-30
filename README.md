@@ -5,6 +5,7 @@
 ## [Development](development/README.md)
 ## [English](english/README.md)
 ## [Git](git/README.md)
+## [Gradle](gradle/README.md)
 ## [Groovy](groovy/README.md)
 ## [Interview](interview/README.md)
 ## [Java](java/README.md)

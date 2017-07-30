@@ -28,21 +28,21 @@
 
 ### Relationship
 
-#### Inheritance
+#### Inheritance(Is a)
 
-+ Наследует
++ When class must have all behavior of another (maybe with changes - redefinition)
 
 #### Association(Has a)
 
-+ Связь между объектами
++ Relationship between classes - one two one, one to many, etc
 
 ##### Composition
 
-+ Часть не может существовать самостоятельно
++ Часть не может существовать самостоятельно (создается внутри объекта контейнера)
 
-##### Aggregation(Has a)
+##### Aggregation
 
-+ Часть может существовать самостоятельно
++ Часть может существовать самостоятельно (передается как параметр конструктора или через сеттер)
 
 ### Преобразование
 
@@ -64,8 +64,13 @@
     + Статический блок static{}
     + Нестатический блок {}
 
-### Вложенные и внутренние классы
+### Class types
 
+#### Simple Class
+#### Static Nested Class
+#### Member Inner Class
+#### Local Inner Class
+#### Anonymous Inner Class
 + Статический внутренний класс называют вложенным
 
 + Создаются для доступа к закрытым методам и переменным класса

@@ -1,0 +1,23 @@
+task compile {
+    doLast {
+        println 'compiling source'
+    }
+}
+
+task compileTest(dependsOn: compile){
+    doLast{
+        println 'compiling unit test'
+    }
+}
+
+task test(dependsOn: compileTest){
+    doLast {
+        println 'running tests'
+    }
+}
+
+task dist(dependsOn: test){
+    doLast {
+        println 'building the distribution'
+    }
+}
