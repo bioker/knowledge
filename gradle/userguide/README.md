@@ -7,7 +7,7 @@
 
 ## Working with existing builds
 
-### [Using the Gradle Command-Line]()
+### [Using the Gradle Command-Line](exist/gradlecmd/README.md)
 ### [The Gradle Console]()
 ### [The Gradle Wrapper]()
 ### [The Gradle Daemon]()

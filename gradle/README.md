@@ -1,3 +1,3 @@
 # Gradle learning
 
-## [Gradle User Guide](USERGUIDE.md)
+## [Gradle User Guide](userguide/README.md)
