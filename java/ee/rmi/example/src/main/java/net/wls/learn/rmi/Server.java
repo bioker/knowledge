@@ -11,21 +11,21 @@ import java.rmi.server.UnicastRemoteObject;
 public class Server {
 
     private String address;
-    private Adder stub;
+    private Adder skeleton;
 
     public Server(String address) throws RemoteException {
         this.address = address;
-        stub = new AddedRemote();
+        skeleton = new AddedRemote();
     }
 
     public void rebind() throws RemoteException, MalformedURLException {
         LocateRegistry.createRegistry(URI.create(address).getPort());
-        Naming.rebind(address, stub);
+        Naming.rebind(address, skeleton);
     }
 
     public void exit() throws RemoteException, NotBoundException, MalformedURLException {
         Naming.unbind(address);
-        UnicastRemoteObject.unexportObject(stub, true);
+        UnicastRemoteObject.unexportObject(skeleton, true);
     }
 
 }

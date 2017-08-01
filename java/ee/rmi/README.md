@@ -18,7 +18,7 @@
     + Reading and unmarshalling result
     + Result returning
 
-## Stub object
+## Skeleton object
 
 + Skeleton is a server side representation of object which must be invoked
 + Skeleton recieve incoming requests
