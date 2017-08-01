@@ -2,8 +2,6 @@
 
 + [Source](http://www.tutorialspoint.com/ejb/)
 
-## Environment
-## Create Application
 ## Stateless Beans
 ## Stateful Beans
 ## Persistence
