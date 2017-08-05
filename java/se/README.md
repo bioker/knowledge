@@ -6,8 +6,6 @@
 ## [String](STRING.md)
 ## [Java API for XML processing](jaxp/README.md)
 ## [Math](math/README.md)
-## [Net](net/README.md)
-## [SQL](sql/README.md)
 ## [IO](io/README.md)
 ## [Serialization](serialization/README.md)
 ## [Cloning](cloning/README.md)

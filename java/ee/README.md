@@ -12,13 +12,13 @@
 + Isolate business logic from connectivity issues - 
     database connection, transactions, security (EJB)
 
-## [Packaging](package/README.md)
+## [Java Networking](net/README.md)
+## [Java Database Connectivity](jdbc/README.md)
 ## [Servlets](servlet/README.md)
 ## [Java Server Pages](jsp/README.md)
 ## [Java Remote Method Invocation](rmi/README.md)
 ## [Enterprise Java Beans](ejb/README.md)
 ## [Java Persistance API](jpa/README.md)
-## [Java Networking](net/README.md)
 ## [Web Services](webservices/README.md)
 ## [Tomcat](tomcat/README.md)
 ## [Spring](spring/README.md)
