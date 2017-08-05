@@ -1,5 +1,7 @@
 # Java Web Application packaging
 
++ [Back](../README.md)
+
 ## Types of Java application files
 
 + JAR
@@ -65,3 +67,7 @@
         + Classes
         + Native Libraries
     + Packed to .rar file (Resource adapter archive)
+
+## [EJB Packaging](EJB.md)
+## [WAR Packaging](WAR.md)
+## [Resources Packaging](RAR.md)
