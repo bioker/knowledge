@@ -13,6 +13,7 @@
     database connection, transactions, security (EJB)
 
 ## [Injection](injection/README.md)
+## [Packaging](package/README.md)
 ## [Java Networking](net/README.md)
 ## [Java Database Connectivity](jdbc/README.md)
 ## [Servlets](servlet/README.md)
