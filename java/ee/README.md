@@ -12,6 +12,23 @@
 + Isolate business logic from connectivity issues - 
     database connection, transactions, security (EJB)
 
+## Java EE Web Application request handling
+
++ *Client* send *Http request*
++ Java Web application transform *Http request* to *HttpSerlvetRequest*
++ Java Web application *Web components* process *HttpServletRequest*
+    + *Web components* can be
+        + Java Servlet
+        + Java Server Faces web page
+        + Web Service
+        + Java Server Page
++ *Web components* can use *Database* and *Java Beans* 
++ *Java Beans* also can use *Database*
++ *Web components* prepare *HttpServletResponse* for answer to client
++ Java Web application transform *HttpServletResponse* to *Http response*
++ *Client* recieve *Http response*
+
+
 ## [Injection](injection/README.md)
 ## [Packaging](package/README.md)
 ## [Java Networking](net/README.md)
