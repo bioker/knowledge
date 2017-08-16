@@ -1,0 +1,9 @@
+import static org.apache.tools.ant.taskdefs.condition.Os.*
+
+task showOSName{
+
+    println "Name: ${OS_NAME}"
+    println "Version: ${OS_VERSION}"
+    println "Architecture: ${OS_ARCH}"
+
+}
