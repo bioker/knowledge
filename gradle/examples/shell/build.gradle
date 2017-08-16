@@ -1,0 +1,3 @@
+task testExc(type:Exec){
+    commandLine '/bin/bash', 'test.sh'
+}
