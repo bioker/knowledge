@@ -120,3 +120,44 @@
 ### When to use Message-Driven Beans
 
 + For processing messages asynchronously, don't use session beans for it
+
+## Accessing Enterprise Java Session Beans
+
++ Client access can be done through a no-interface view or 
+    through business interface
+    + No-interface view is storing reference to ejb and calling
+        its public methods (not sure about it, need to check)
+    + Business interface is just using standard java interfaces
+
++ Well designed interfaces very simplify the development and maintenance
+    of Java EE applications
++ You need to develop interfaces which will provide client isolation 
+    from changes in internal logic
+
+### Using EJB in Clients
+
++ The client of an enterprise bean obtains with dependency injection,
+    using special annotations, or JNDI lookup, using JNDI syntax to find
+    the necessary instance of bean
+
++ Dependency Injection (DI) is the simpliest way to obtain an EJB reference
+    + Java EE components (servlets, JSF, web services) support DI using the
+        javax.ejb.EJB annotation
+
++ Java SE application can get EJB reference by explicit JNDI lookup
+
+#### Portable JNDI syntax
+
++ Three namespaces are used for portable JNDI lookups
+    + java:global
+        + Portable way of finding remote EJB
+        + Format
+            + `java:global[/application name]/module name/ejb name[/interface name]`
+    + java:module
+        + Used to look up local EJB within the same module
+        + Format
+            + `java:module/ejb name[/interface name]`
+    + java:app
+        + Used to look up local EJB within the same application
+        + Format
+            + `java:app[/module name]/ejb name[/interface name]`
