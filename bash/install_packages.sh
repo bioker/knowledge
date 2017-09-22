@@ -6,4 +6,5 @@ sudo apt-get -y install \
     unzip \
     curl \
     jq \
-    tidy
+    tidy \
+    tig
