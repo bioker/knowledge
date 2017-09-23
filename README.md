@@ -11,6 +11,7 @@
 ## [Java](java/README.md)
 ## [JavaScript](js/README.md)
 ## [Kotlin](kotlin/README.md)
+## [MySQL](mysql/README.md)
 ## [NodeJS](nodejs/README.md)
 ## [Oracle](oracle/README.md)
 ## [Spring](spring/README.md)
