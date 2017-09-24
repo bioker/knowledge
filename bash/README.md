@@ -3,6 +3,7 @@
 + [Back](../README.md)
 
 ## [Basics](bash.sh)
+## [SED](sed/README.md)
 
 ## Examples
 
@@ -15,6 +16,7 @@
 + [Execute git push into each directory](git_status_each_dir.sh)
 + [Simple linux system monitoring](linux_monitor.sh)
 + [Get list of all filenames without extension](list_files_for_md.sh)
++ [Clean Linux Mint system](mintclean.sh)
 + [Delete repository data into each directory](rm_git_each_dir.sh)
 + [Install linux packages](install_packages.sh)
 + [Install rar tool](install_rar.sh)
