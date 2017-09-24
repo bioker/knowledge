@@ -33,6 +33,7 @@
 ## [Packaging](package/README.md)
 ## [Java Networking](net/README.md)
 ## [Java Database Connectivity](jdbc/README.md)
+## [Java Management Extenstions](jmx/README.md)
 ## [Servlets](servlet/README.md)
 ## [Java Server Pages](jsp/README.md)
 ## [Java Remote Method Invocation](rmi/README.md)
