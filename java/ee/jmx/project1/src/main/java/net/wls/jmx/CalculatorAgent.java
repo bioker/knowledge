@@ -4,25 +4,25 @@ import javax.management.*;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 
-public class SimpleAgent {
+public class CalculatorAgent {
 
     public static void main(String[] args) {
-        SimpleAgent simpleAgent = new SimpleAgent();
-        System.out.println("SimpleAgent is running");
-        simpleAgent.waitForEnterPressed();
+        CalculatorAgent helloAgent = new CalculatorAgent();
+        System.out.println("CalculatorAgent is running");
+        helloAgent.waitForEnterPressed();
     }
 
     private MBeanServer mbs = null;
 
-    public SimpleAgent() {
+    public CalculatorAgent() {
         mbs = ManagementFactory.getPlatformMBeanServer();
 
-        HelloMBean helloMBean = new HelloMBeanImpl();
-        ObjectName helloMBeanName;
+        CalculatorMBean calculatorMBean = new Calculator();
+        ObjectName calculatorMBeanName;
 
         try {
-            helloMBeanName = new ObjectName("SimpleAgent:name=helloMBean");
-            mbs.registerMBean(helloMBean, helloMBeanName);
+            calculatorMBeanName = new ObjectName("CalculatorAgent:name=calculatorMBean");
+            mbs.registerMBean(calculatorMBean, calculatorMBeanName);
         } catch (MalformedObjectNameException |
                 NotCompliantMBeanException |
                 InstanceAlreadyExistsException |

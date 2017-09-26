@@ -1,6 +1,9 @@
 package net.wls.jmx;
 
-public class HelloMBeanImpl implements HelloMBean {
+import javax.management.MXBean;
+
+@MXBean
+public class Hello implements HelloMBean {
 
     private String name;
 
