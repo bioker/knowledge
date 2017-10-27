@@ -90,6 +90,7 @@
     <load-on-startup>5</load-on-startup>
 </servlet>
 ```
+
 + Parameter has int type, if value is smaller than 0 then servlet will
     be started on user request, else, servlet will be start on startup
     in order of queue with priority which set by parameter value
@@ -115,3 +116,13 @@
     Context is application configuration
 + Config parameters can't be set meanwhile
     Context allows it
+
+## Whait is request dispatcher
+
++ It's interface which provide facility of dispatching the request
+    to another resource (html, jsp or servlet)
++ Methods
+    + `public void forward(ServletRequest request, ServletResponse response)`
+        + Forward processing to another resource
+    + `public void include(ServletRequest request, ServletResponse response)`
+        + Includes the response from another resource to current
