@@ -1,10 +1,10 @@
 group 'net.wls.test'
 version '0.1.0'
 
-//def springVersion='5.0.0.RELEASE'
-//def hibernateVersion='5.0.1.Final'
+def springVersion='5.0.0.RELEASE'
+def hibernateVersion='5.2.6.Final'
 def lombokVersion='1.16.18'
-//def junitVersion='4.12'
+def junitVersion='4.12'
 //def log4jVersion='2.9.0'
 //def servletApiVersion='3.1.0'
 //def jspApiVersion='2.3.1'
@@ -77,9 +77,9 @@ dependencies {
     // mail
     //compile group: 'javax.mail', name: 'mail', version: '1.4.7'
     // spring
-    //compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+    //testCompile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
     //compile group: 'org.springframework', name: 'spring-beans', version: "$springVersion"
-    //compile group: 'org.springframework', name: 'spring-jdbc', version: "$springVersion"
+    //testCompile group: 'org.springframework', name: 'spring-jdbc', version: "$springVersion"
     //compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
     //compile group: 'org.springframework', name: 'spring-test', version: "$springVersion"
     //compile group: 'org.springframework', name: 'spring-aop', version: "$springVersion"
@@ -87,11 +87,15 @@ dependencies {
     //compile group: 'org.springframework', name: 'spring-orm', version: "$springVersion"
     //compile group: 'org.springframework', name: 'spring-expression', version: "$springVersion"
     // hibernate
-    //compile group: 'org.hibernate', name: 'hibernate-core', version: "$hibernateVersion"
+    testCompile group: 'org.hibernate', name: 'hibernate-core', version: "$hibernateVersion"
     // servlet
     //compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: "$servletApiVersion"
     // jsp
     //compileOnly group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version:"$jspApiVersion"
+    // jpa
     compileOnly group: 'javax.persistence', name: 'persistence-api', version: "$jpaApiVersion"
-    //testCompile group: 'junit', name: 'junit', version: "$junitVersion"
+    // h2 db
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.196'
+    // junit
+    testCompile group: 'junit', name: 'junit', version: "$junitVersion"
 }
