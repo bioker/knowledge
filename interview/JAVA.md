@@ -4,6 +4,7 @@
 
 ## [Servlets](java/SERVLET.md)
 ## [JSP](java/JSP.md)
+## [JPA](java/JPA.md)
 
 ## OOP
 
