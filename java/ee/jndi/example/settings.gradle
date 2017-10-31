@@ -1,0 +1,5 @@
+rootProject.name = 'jndi'
+include 'client'
+include 'res'
+include 'dao'
+
