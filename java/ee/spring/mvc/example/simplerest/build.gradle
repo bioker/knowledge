@@ -1,0 +1,29 @@
+group 'net.wls.test.springmvc'
+version '0.1.0'
+
+def springVersion = '5.0.0.RELEASE'
+
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+task copyRuntimeLibs(type: Copy) {
+    into 'lib'
+    from configurations.runtime
+}
+
+war {
+    classpath fileTree('lib')
+}
+
+dependencies {
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.1'
+}

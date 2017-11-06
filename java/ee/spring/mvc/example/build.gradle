@@ -1,28 +1,2 @@
 group 'net.wls.test'
 version '0.1.0'
-
-def springVersion = '5.0.0.RELEASE'
-
-apply plugin: 'war'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-    mavenLocal()
-    jcenter()
-}
-
-task copyRuntimeLibs(type: Copy) {
-    into 'lib'
-    from configurations.runtime
-}
-
-war {
-    classpath fileTree('lib')
-}
-
-dependencies {
-    compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
-    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
-}

@@ -1,1 +1,3 @@
  rootProject.name = 'springmvc'
+ include 'simpleweb'
+ include 'simplerest'
