@@ -34,4 +34,37 @@
 + If you have pretty clean project with elegant written code and so on,
     don't forget that one day probably it will be necessary to break
     something because of time limits
+
 + Be a catalyst of change
+    + Soldiers, villagers and stone soup story
+
++ Remember a big picture
+    + Often It can be necessary for decision 
+        whether task we are going to do is necessary
+
++ Frog problem
+    + If you'll throw frog to boiling water then it'll jump out 
+        but if you'll put it when water is still cold, after 
+        that you'll start to boil the water, frog will sit there 
+        adapting to temperature and at the end it will die
+    + Don't be like the frog, look around
+
++ Good-Enough Software
+    + Striving to better, oft we mar what's well
++ Involve your users in the trade off
+    + Do you ask them about how good your feature?
+    + Make Quality a Requirements Issue
+    + When you're gonna allow your users to use 
+        your product you're gonna get feedback and real 
+        demands for further work
++ Know When to Stop
+    + Don't spoil good enough program by
+        over embellishment and over refinement
++ An investment in knowledge always pays best interests
+    + Principles is similar to managing financial portfolio:
+        + Serious investors invest regularly - as a habit
+        + Diversification is the key to long-term success
+        + Smart investors balance their portfolios between
+            convservative and high-risk, high-reward investments
+        + Investors try to by low and sell high for maximum return
+        + Portfolios should be reviewed and rebalanced periodically
