@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address" class="net.wls.learn.spring.autowiring.Address">
+        <property name="country" value="Russia"/>
+    </bean>
+    <bean id="address1" class="net.wls.learn.spring.autowiring.Address">
+        <property name="country" value="USA"/>
+    </bean>
+    <bean id="address3" class="net.wls.learn.spring.autowiring.Address">
+        <property name="country" value="England"/>
+    </bean>
+
+    <bean id="person1" class="net.wls.learn.spring.autowiring.Person" autowire="byName"/>
+
+    <bean id="person2" class="net.wls.learn.spring.autowiring.Person" autowire="constructor"/>
+
+</beans>

@@ -1,0 +1,9 @@
+A user of RSA creates and then publishes a public key based on two large prime numbers,
+along with an auxiliary value. The prime numbers must be kept secret. Anyone can use the public key
+to encrypt a message, but with currently published methods, if the public key is large enough,
+only someone with knowledge of the prime numbers can feasibly decode the message. Breaking RSA
+encryption is known as the RSA problem; whether it is as hard as the factoring problem remains an open question.
+
+RSA is a relatively slow algorithm, and because of this it is less commonly used to directly encrypt user data.
+More often, RSA passes encrypted shared keys for symmetric key cryptography which in turn can
+perform bulk encryption-decryption operations at much higher speed.

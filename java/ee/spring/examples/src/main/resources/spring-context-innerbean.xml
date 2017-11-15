@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="textEditor" class="net.wls.learn.spring.innerbean.TextEditor">
+        <constructor-arg>
+            <value>textEditor1</value>
+        </constructor-arg>
+        <!--<property name="name" value="textEditor1"/>-->
+        <property name="spellChecker">
+            <bean class="net.wls.learn.spring.innerbean.SpellChecker">
+                <property name="name" value="spellChecker1"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="innerSpellChecker" class="net.wls.learn.spring.innerbean.SpellChecker">
+        <property name="name" value="spellChecker2"/>
+    </bean>
+
+    <bean id="textEditor2" class="net.wls.learn.spring.innerbean.TextEditor">
+        <constructor-arg>
+            <value>textEditor2</value>
+        </constructor-arg>
+        <!--        <property name="name" value="textEditor2"/>-->
+        <property name="spellChecker" ref="innerSpellChecker"/>
+    </bean>
+
+</beans>

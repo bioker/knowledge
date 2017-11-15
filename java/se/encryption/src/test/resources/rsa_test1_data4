@@ -1,0 +1,1 @@
+RSA is a relatively slow algorithm, and because of this it is less commonly used to directly encrypt user data.

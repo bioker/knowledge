@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address1" class="net.wls.learn.spring.collections.Address">
+        <constructor-arg name="country" value="Ireland"/>
+    </bean>
+    <bean id="address2" class="net.wls.learn.spring.collections.Address">
+        <constructor-arg name="country" value="Poland"/>
+    </bean>
+    <bean id="address3" class="net.wls.learn.spring.collections.Address">
+        <constructor-arg name="country" value="Netherlands"/>
+    </bean>
+
+    <bean id="javaCollections" class="net.wls.learn.spring.collections.JavaCollections">
+        <property name="addressesList">
+            <list>
+                <value>Russia</value>
+                <value>USA</value>
+                <value>USA</value>
+                <value>England</value>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+                <ref bean="address3"/>
+            </list>
+        </property>
+        <property name="addressesSet">
+            <set>
+                <value>Russia</value>
+                <value>USA</value>
+                <!-- will not exist in result -->
+                <value>USA</value>
+                <value>England</value>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+                <ref bean="address3"/>
+            </set>
+        </property>
+        <property name="addressesMap">
+            <map>
+                <entry key="1" value="Russia"/>
+                <entry key="2" value="USA"/>
+                <!-- will not exist in result -->
+                <entry key="3" value="England"/>
+                <entry key="3" value="England"/>
+                <entry key="4" value-ref="address1"/>
+                <entry key="5" value-ref="address2"/>
+                <entry key="6" value-ref="address3"/>
+                <entry key="7">
+                    <null/>
+                </entry>
+            </map>
+        </property>
+        <property name="addressesProp">
+            <props>
+                <prop key="1">Russia</prop>
+                <!-- will not exist in result -->
+                <prop key="1">Russia</prop>
+                <prop key="2">USA</prop>
+                <prop key="3">England</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
