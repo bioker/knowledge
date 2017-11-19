@@ -24,7 +24,7 @@
         + Take responsibility for yourself and your actions
     + Provide options, don't make lame excuses
 + Big troubles grows from small ones
-    + If a one broken window don't repaired long time,
+    + If a one broken window doesn't repaired long time,
         then people will think that building is probably abandoned,
         then, for example, graffiti, damage, can appears there
         and in the end, building will be real abandoned
@@ -68,3 +68,45 @@
             convservative and high-risk, high-reward investments
         + Investors try to by low and sell high for maximum return
         + Portfolios should be reviewed and rebalanced periodically
++ Typic goals
+    + Learn at least one new language every year
+        + It helps to think more generally and solve problems in different ways
+    + Read a technical book each quarter
+        + It helps to accumulate knowledge
+    + Read nontechnical books
+    + Take classes
+    + Participate in local user groups
+    + Experiment with different environments
+        + OS
+        + IDE
+        + etc
+    + Stay current
+    + Get wired
++ Critically analyze what you read and hear
++ Some tips for asking questions
+    + Know exactly what you want to ask and be specific
+    + Be polite
+    + When you frame your question look again and try to answer
+        by yourself or with Internet
+    + Decide if you want to ask publicly or privately
+        + Some people beware of public environment
+    + Be patient
+        + People are busy and it may take time
+    + Thank anyone who responds you
++ Communication is crucial for self development
+    + Improve it regularly
++ Know what you want to say
+    + Be prepared to speaking and keep in 
+        mind purposes of talking
++ Know your audience
+    + Communication is exchange of information if you don't 
+        interest your audience they will not listen and 
+        it will be useless
+    + For make them interested, you need to know them
+    + The acrostic WISDOM
+        +                     What do you want them to learn?
+        +       What is their Interest in what you've got to say?
+        +                 How Sophisticated are they?
+        +            How much Detail do they want?
+        + Whom do you want to Own the information?
+        +         How can you Motivate them to listen you?
