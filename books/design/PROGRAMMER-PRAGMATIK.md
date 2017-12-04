@@ -110,3 +110,8 @@
         +            How much Detail do they want?
         + Whom do you want to Own the information?
         +         How can you Motivate them to listen you?
++ Choose good time to talking about anything
+    + Always ask yourself - Is this a good time to talk about?
++ Choose right approach to audience
+    + Try to know what way to communicate is preferable for 
+        who you talk with
