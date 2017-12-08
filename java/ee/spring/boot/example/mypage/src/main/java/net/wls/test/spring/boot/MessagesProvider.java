@@ -18,7 +18,7 @@ public class MessagesProvider {
 
     @PostConstruct
     public void init() {
-        accessor = new MessageSourceAccessor(messageSource, Locale.);
+        accessor = new MessageSourceAccessor(messageSource, Locale.US);
     }
 
     public String get(String code) {
