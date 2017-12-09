@@ -2,6 +2,6 @@
 
 + [Back](../README.md)
 
-## [Programming](PROGRAMMING.md)
-## [Java](JAVA.md)
+## [Programming](programming/README.md)
+## [Java](java/README.md)
 ## [Speaking](SPEAK.md)
