@@ -223,3 +223,22 @@
 + Bundles can be gotten by ResourceBundleMessageSource 
     or ReloadableResourceBundleMessageSource configuration
 + For locale determination there is need to define LocaleResolver in configuration
+
+### RESTful application
+
++ Use @RestController instead of @Controller
++ Use Jackson library to transform request data to object 
+    and result object to response data
+    + For using Objects as requests and response
+        + @RequestBody for arguments in request mapping method
+        + @ResponseBody for type of returned value
+    + For additional parameters (not in http body)
+        + @PathVariable - part of url path for using as value, 
+            example of definition (in @RequestMapping pattern): `/someController/processRequest/{someVariable}`
+        + @RequestParam - http parameter in url, like `/url?someParam=someValue`
+        + @RequestHeader - http request header value
+
+### Spring MVC Interceptors
+
++ It's analogy of servlet filter
++ It intercepts requests from client and process it
