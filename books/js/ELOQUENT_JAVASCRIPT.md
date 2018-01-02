@@ -84,6 +84,7 @@ var f1 = function (){
 ##### Undefined
 
 ```
+// default value for new variable
 var x;
 x === undefined;
 ```
@@ -91,6 +92,7 @@ x === undefined;
 ##### Null
 
 ```
+// used to mark empty value
 function findValue(arr, index){
     if(arr.length > index){
         return arr.get(index);
