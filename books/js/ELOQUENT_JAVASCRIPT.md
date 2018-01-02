@@ -1,66 +1,101 @@
 # Marijn Haverbeke - Eloquent JavaScript
 
-## Введение
+## Introduction
 
-### О программировании
+### About programming
 
-+ Искусство программирование - это искусство упровлять сложностью
++ Art of programming is art of complexity control
 
-+ Отклонение от "лучших" практик не всегда плохо
++ Best practices is not panacea
 
-#### Почему язык важен
+#### Why programming language is important
 
-+ Язык позволяет пополнить "словарный запас" компьютера и
-    выйти на высокий уровень абстракции, такой же как 
-    обычный человеческий язык
++ Programming language allow us to extend 
+    dictionary of computer and thus, teach it 
+    make more complex things
 
-#### Что такое JavaScript
+#### What is JavaScript
 
-+ JavaScript от части слишком либерален
-+ Гибкость языка позволяет использовать разные техники
-    которые временами не доступны в более строгих языках
++ JavaScript is agile language
++ Flexibility allow us to do things that 
+    can be done in other strict languages
 
-#### Код и что с ним делать
+#### Code and what to do with it
 
-+ Не позволяйте себе думать что поняли пример кода
-    пока его не реализовали
++ Don't allow yourself to think that you 
+    understand how code works until you haven't implemented it
 
-### Величины, типы и операторы
+### Language basics
 
-+ Способ представления десятичного числа в двоичном
-> 0   0  0  0  1  1  0  1
-> 128 64 32 16 8  4  2  1
-> 0 + 0 +0 +0 +8 +4 +0 +1 = 13
++ Way to represent decimal number in binary format
 
-#### Величины (переменные)
+|128| 64| 32| 16| 8 | 4 | 2 | 1 |
+|---|---|---|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 |
+| 0 | +0| +0| +0| +8| +4| +0| +1| 
 
-+ Шесть основных типов переменных
-    + Числа
-    + Строки
-    + Булевые значения
-    + Объекты
-    + Функции
-    + Неопределенные значения
+> = 13
 
-##### Числа
+#### Types
 
-+ Целочисленные - 13, -1
-+ Дробные - 9.18, 2.998e8
-+ Infinity, -Infinity
-+ NaN
++ Number
++ String
++ Boolean
++ Object
++ Function
++ Undefined
++ Null
 
-##### Строки
+##### Number
 
-+ "В двойных кавычках"
-+ 'В одинарных кавычках'
++ Integer - `13, -1`
++ Float - `9.18, 2.998e8`
++ `Infinity, -Infinity`
++ `NaN`
 
-##### Булевые значения
+##### String
 
-+ true
-+ false
++ `"in double quotes"`
++ `'in single quotes'`
 
-##### Неопределенные значения
+##### Boolean
 
-+ null
-+ undefined
++ `true`
++ `false`
 
+##### Object
+
+```
+{
+    x: 1,
+    y: 2,
+    z: 3
+}
+```
+
+##### Function
+
+```
+var f1 = function (){
+    console.log("I'm function");
+}
+```
+
+##### Undefined
+
+```
+var x;
+x === undefined;
+```
+
+##### Null
+
+```
+function findValue(arr, index){
+    if(arr.length > index){
+        return arr.get(index);
+    } else {
+        return null;
+    }
+}
+```
