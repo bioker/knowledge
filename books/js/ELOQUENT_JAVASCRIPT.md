@@ -53,15 +53,35 @@
 + `Infinity, -Infinity`
 + `NaN`
 
++ Operators
+    + Addition - `13 + 1`
+    + Subtraction - `13 - 1`
+    + Multiplying - `13 * 1`
+    + Division - `13 / 1`
+    + Remainder - `13 % 2`
+
 ##### String
 
 + `"in double quotes"`
 + `'in single quotes'`
 
++ Operators
+    + Concatenation - `'look at ' + 'this' + ' string'`
+    + Unicode comparison
+        +  `'ab' < 'ac'`
+        +  `'ab' <= 'ab'`
+
 ##### Boolean
 
 + `true`
 + `false`
+
++ Operators
+    + Greater than - `5 > 2`
+    + Less than - `2 < 5`
+    + And - `true && true`
+    + Or - `true || false`
+    + Not - `!true`
 
 ##### Object
 
