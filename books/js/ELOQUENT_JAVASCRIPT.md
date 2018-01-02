@@ -36,7 +36,7 @@
 
 > = 13
 
-#### Types
+#### Types and Operators
 
 + Number
 + String
@@ -137,3 +137,134 @@ function findValue(arr, index){
         + Property in `with` block - `with(variable){ delete property;}`
 + Ternary
     + Conditional - `true ? 'its true' : 'its false'`
+
+#### Automatic types conversion
+
+```
+console.log(8 * null)
+// → 0
+console.log("5" - 1)
+// → 4
+console.log("5" + 1)
+// → 51
+console.log("five" * 2)
+// → NaN
+console.log(false == 0)
+// → true
+```
+
++ Just keep it mind
+
+### Program Structure
+
++ Expression
+    + Fragment of code that produces a value
++ Statement
+    + One or more expressions that change something
+        + Print output
+        + Save input to database
+        + etc
++ Variables
+    + Runtime defined expressions associated with some value
++ Environment
+    + Collection of variables that exist at a given time
+        + Variables - part of language
+        + Variables for interaction with external environment 
+            (browser for example)
+
+#### Keywords
+
+```
+break case catch class const continue debugger
+default delete do else enum export extends false
+finally for function if implements import in
+instanceof interface let new null package private
+protected public return static super switch this
+throw true try typeof var void while with yield
+```
+
+#### Functions
+
++ Function is value with executable part of program
++ Functions can return result
+    + Return max of two numbers - `Math.max(2,4)`
++ Functions can be with side effect and without it
+    + Side effect function example - `alert('look at me')`
+        + Execution is influencing to something external
+        + Execution is dependent of something external
+    + Function without side effect - `Math.max(2,4)`
+        + Execution and result is not dependent 
+            or influence to something external
+
+#### Control Flow
+
++ Control Flow is Sequences of statements 
+    that will be executed with defined order
++ How to control order of execution
+    + Conditions
+        + IfElse
+        + Switch
+    + Loops
+        + For
+        + While
+        + DoWhile
+
+#### Exercises
+
+##### Triangle
+
+```
+for(var i = 0; i < 10; i++){
+    var line = '#';
+    for(var j = i; j > 0; j--){
+        line += '#';
+    }
+    console.log(line);
+}
+```
+
+##### FizzBuzz
+
+```
+for(var i = 1; i <= 100; i++){
+    if(i % (3 * 5) == 0){
+        console.log('FizzBuzz');
+    } else if (i % 5 == 0){
+        console.log('Buzz');
+    } else if (i % 3 == 0){
+        console.log('Fizz');
+    } else {
+        console.log(i);
+    }
+};
+```
+
+##### ChessBoard
+
+```
+let chessBoard = function(size){
+    let line = '';
+    for(var i = 1; i <= size; i++){
+        for(var j = 1; j <= size; j++){
+            let lineIsEven = i % 2 == 0;
+            let cellIsEven = j % 2 == 0;
+	    if(lineIsEven){
+                if(cellIsEven){
+                    line += '#';
+                } else {
+                    line += ' ';
+                }
+            } else {
+                if(cellIsEven){
+                    line += ' ';
+                } else {
+                    line += '#';
+                }
+            }
+        }
+	line += '\n';
+    }
+    return line;
+}
+```
+
