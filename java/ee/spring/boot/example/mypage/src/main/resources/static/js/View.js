@@ -1,61 +1,147 @@
-function View(canvas, model){
-    this.context = canvas.getContext('2d');
-    this.width = canvas.width;
-    this.height = canvas.height;
-    this.topIndent = canvas.getBoundingClientRect().top;
-    this.leftIndent = canvas.getBoundingClientRect().left;
-    this.model = model;
-    this.pointRadius = 10;
-}
+let View = function(canvas, model){
+    let context = canvas.getContext('2d');
+    let nodeRadius = GraphUtils.defaultNodeRadius;
+    let topIndent = canvas.getBoundingClientRect().top;
+    let leftIndent = canvas.getBoundingClientRect().left;
+    let backgroundColor = GraphUtils.defaultBackgroundColor;
+    let shadowColor = GraphUtils.defaultShadowColor;
+    let labelColor = GraphUtils.defaultLabelColor;
+    let linkColor = GraphUtils.defaultLinkColor;
+    let font = GraphUtils.defaultFont;
 
-View.prototype.renderPoint(point, atOnce){
-    if(atOnce){
-        this.context.beginPath();
+    let renderNode = function(node){
+
+        context.save();
+
+        if(node.isSelected()){
+            context.shadowColor = shadowColor;
+            context.shadowBlur = 20;
+        }
+
+        context.beginPath();
+        context.fillStyle = node.getColor();
+        context.arc(node.getX(), node.getY(), nodeRadius, 0, Math.PI * 2)
+        context.fill();
+        context.fillStyle = labelColor;
+        context.font = font;
+        let fontPoint = GraphUtils.tangentPoint(node.getX(), node.getY(), nodeRadius, 45);
+        context.fillText(node.getName(), fontPoint.x, fontPoint.y);
+
+        context.restore();
     }
-    this.context.arc(point.x, point.y, this.pointRadius, 0, Math.PI * 2)
-    if(atOnce){
-        this.context.stroke();
+
+    let renderLink = function(link){
+
+        context.save();
+
+        context.strokeStyle = linkColor;
+        context.beginPath();
+        context.moveTo(link.getNode1().getX(), link.getNode1().getY())
+        context.lineTo(link.getNode2().getX(), link.getNode2().getY())
+        context.stroke();
+
+        context.restore();
+    }
+
+    let clear = function(){
+        context.save();
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = backgroundColor;
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.restore();
+    }
+
+    let render = function(){
+        clear();
+        model.getGraph().getLinks().forEach(function(link, index, arr){
+            renderLink(link);
+        });
+        model.getGraph().getNodes().forEach(function(node, index, arr){
+            renderNode(node);
+        });
+    }
+
+    let getCanvas = function(){
+        return canvas;
+    }
+
+    let getModel = function(){
+        return model;
+    }
+
+    let getNodeRadius = function(){
+        return nodeRadius;
+    }
+
+    let setNodeRadius = function(radius){
+        nodeRadius = radius;
+    }
+
+    let getTopIndent = function(){
+        return topIndent;
+    }
+
+    let getLeftIndent = function(){
+        return leftIndent;
+    }
+
+    let getBackgroundColor = function(){
+        return backgroundColor;
+    }
+
+    let setBackgroundColor = function(bgColor){
+        backgroundColor = bgColor;
+    }
+
+    let getShadowColor = function(){
+        return shadowColor;
+    }
+
+    let setShadowColor = function(sColor){
+        shadowColor = sColor;
+    }
+
+    let getLabelColor = function(){
+        return labelColor;
+    }
+
+    let setLabelColor = function(lColor){
+        labelColor = lColor;
+    }
+
+    let getLinkColor = function(){
+        return linkColor;
+    }
+
+    let setLinkColor = function(lColor){
+        linkColor = lColor;
+    }
+
+    let getFont = function(){
+        return font;
+    }
+
+    let setFont = function(f){
+        font = f;
+    }
+    return {
+        clear: clear,
+        render: render,
+        getCanvas: getCanvas,
+        getModel: getModel,
+        getTopIndent: getTopIndent,
+        getLeftIndent: getLeftIndent,
+        getNodeRadius: getNodeRadius,
+        setNodeRadius: setNodeRadius,
+        setBackgroundColor: setBackgroundColor,
+        getBackgroundColor: getBackgroundColor,
+        setShadowColor: setShadowColor,
+        getShadowColor: getShadowColor,
+        getLabelColor: getLabelColor,
+        setLabelColor: setLabelColor,
+        getLinkColor: getLinkColor,
+        setLinkColor: setLinkColor,
+        getFont: getFont,
+        setFont: setFont
     }
 }
-
-View.prototype.clear = function(){
-    this.context.clearRect(0, 0, this.width, this.height);
-};
-
-View.prototype.render(){
-    this.clear();
-    this.context.beginPath();
-    model.points.forEach(function(point, index, arr){
-        this.renderPoint(point);
-    }, this);
-    this.context.stroke();
-}
-
-//View.prototype.onclick = function(x, y){
-//    let canvasClickPoint = this.pagePointToCanvasPoint(x, y);
-//    this.onclickProcessor(this, canvasClickPoint.x, canvasClickPoint.y);
-//}
-//
-//View.prototype.onclickProcessor = function(){};
-//
-//View.prototype.pagePointToCanvasPoint = function(x, y){
-//    return {x: x - this.leftIndent, y: y - this.topIndent};
-//};
-//
-//View.prototype.changeColor = function(color){
-//    this.context.fillStyle = color;
-//};
-//
-//View.prototype.drawCircle = function(x, y, r){
-//    this.context.beginPath();
-//    this.context.arc(x, y, r, 0, Math.PI * 2)
-//    this.context.fill();
-//};
-//
-//View.prototype.drawLine = function(x1, y1, x2, y2){
-//    this.context.beginPath();
-//    this.context.moveTo(x1, y1);
-//    this.context.lineTo(x2, y2);
-//    this.context.stroke();
-//};
-//
