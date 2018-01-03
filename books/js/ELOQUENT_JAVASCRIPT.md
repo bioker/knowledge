@@ -337,3 +337,130 @@ function square(x){
     + This is two functions example but it can contains any 
         amount of nested functions. Limit is defined by size 
         of stack for this programm
+
+### Optional arguments
+
++ In JS amount of passed arguments  is not strict
++ Redundant arguments will be ignored
++ Necessary parameters which not been passed will 
+    have undefined value
+
+### Closure
+
++ Closure is possibility to access variable in 
+    function scope after it creation
+
+```
+function wrapValue(n) {
+  var localVariable = n;
+  return function() { return localVariable; };
+}
+
+var wrap1 = wrapValue(1);
+var wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+// → 2
+```
+
++ Arguments is variables too
+
+```
+function multiplier(factor) {
+    return function(number) {
+        return number * factor;
+    };
+}
+
+var twice = multiplier(2);
+console.log(twice(5));
+// → 10
+```
+
+### Recursion
+
++ Recursion is possibility of calling 
+    function in its body
++ Recursion is slower than loop
++ Recursion sometimes is clearer 
+    than loop for understanding what happening
++ Choice between understandable and fast code
+    + Prefer understandable code
+    + Optimize only when and where 
+        it really necessary (demands, problems)
+
+### Growing Functions
+
++ Two more or less natural ways to create a function
+    + Code repetition
+    + Part of code for performing determined action
++ Function must do one determined thing (S in SOLID principles)
++ Don't write your own functionality if there 
+    is existed library with suitable parameters
+
+### Side Effect
+
++ Functions can be divided into those that are called for
+    + Side Effect
+    + Return Value
+    + Both of it
++ Side Effect function change something outside
++ Return Value function calculate some value inside and return it
+
+#### Pure Function
+
++ Pure function is Return Value function that doesn't 
+    rely on side effects from other code
++ Pure function always return the same value 
+    with the same arguments
++ Pure function can be tested without context 
+    because it context independent
+
+### Exercises
+
+#### Math Min
+
+```
+function min(x, y){
+    if(x === y){
+        return x;
+    } else if (x < y){
+        return x;
+    } else {
+        return y;
+    }
+}
+```
+
+#### Recursion
+
+```
+function isEven(x){
+    if(x === 0){
+        return true;
+    } else if (x === 1){
+        return false;
+    } else {
+        return isEven(x - (x < 0 ? -2 : 2))
+    }
+}
+```
+
+#### Bean Counting
+
+```
+function countChar(str, ch){
+    var result = 0;
+    for(var i = 0; i < str.length; i++){
+        if(str.charAt(i) === ch){
+            result++;
+        }
+    }
+    return result;
+}
+
+function countBs(str){
+    return countChar(str, 'B');
+}
+```
