@@ -25,7 +25,7 @@
 + Don't allow yourself to think that you 
     understand how code works until you haven't implemented it
 
-### Language basics
+## Language basics
 
 + Way to represent decimal number in binary format
 
@@ -36,7 +36,7 @@
 
 > = 13
 
-#### Types and Operators
+### Types and Operators
 
 + Number
 + String
@@ -46,7 +46,7 @@
 + Undefined
 + Null
 
-##### Number
+#### Number
 
 + Integer - `13, -1`
 + Float - `9.18, 2.998e8`
@@ -60,7 +60,7 @@
     + Division - `13 / 1`
     + Remainder - `13 % 2`
 
-##### String
+#### String
 
 + `"in double quotes"`
 + `'in single quotes'`
@@ -71,7 +71,7 @@
         +  `'ab' < 'ac'`
         +  `'ab' <= 'ab'`
 
-##### Boolean
+#### Boolean
 
 + `true`
 + `false`
@@ -81,7 +81,7 @@
     + Or - `true || false`
     + Not - `!true`
 
-##### Object
+#### Object
 
 ```
 {
@@ -91,7 +91,7 @@
 }
 ```
 
-##### Function
+#### Function
 
 ```
 var f1 = function (){
@@ -99,7 +99,7 @@ var f1 = function (){
 }
 ```
 
-##### Undefined
+#### Undefined
 
 ```
 // default value for new variable
@@ -107,7 +107,7 @@ var x;
 x === undefined;
 ```
 
-##### Null
+#### Null
 
 ```
 // used to mark empty value
@@ -120,7 +120,7 @@ function findValue(arr, index){
 }
 ```
 
-#### Other operators
+### Other operators
 
 + Unary
     + Type of - `typeof 'this is string'`
@@ -138,7 +138,7 @@ function findValue(arr, index){
 + Ternary
     + Conditional - `true ? 'its true' : 'its false'`
 
-#### Automatic types conversion
+### Automatic types conversion
 
 ```
 console.log(8 * null)
@@ -155,7 +155,7 @@ console.log(false == 0)
 
 + Just keep it mind
 
-### Program Structure
+## Program Structure
 
 + Expression
     + Fragment of code that produces a value
@@ -172,7 +172,7 @@ console.log(false == 0)
         + Variables for interaction with external environment 
             (browser for example)
 
-#### Keywords
+### Keywords
 
 ```
 break case catch class const continue debugger
@@ -183,7 +183,7 @@ protected public return static super switch this
 throw true try typeof var void while with yield
 ```
 
-#### Functions
+### Functions
 
 + Function is value with executable part of program
 + Functions can return result
@@ -196,7 +196,7 @@ throw true try typeof var void while with yield
         + Execution and result is not dependent 
             or influence to something external
 
-#### Control Flow
+### Control Flow
 
 + Control Flow is Sequences of statements 
     that will be executed with defined order
@@ -209,9 +209,9 @@ throw true try typeof var void while with yield
         + While
         + DoWhile
 
-#### Exercises
+### Exercises
 
-##### Triangle
+#### Triangle
 
 ```
 for(var i = 0; i < 10; i++){
@@ -223,7 +223,7 @@ for(var i = 0; i < 10; i++){
 }
 ```
 
-##### FizzBuzz
+#### FizzBuzz
 
 ```
 for(var i = 1; i <= 100; i++){
@@ -239,7 +239,7 @@ for(var i = 1; i <= 100; i++){
 };
 ```
 
-##### ChessBoard
+#### ChessBoard
 
 ```
 let chessBoard = function(size){
@@ -268,3 +268,72 @@ let chessBoard = function(size){
 }
 ```
 
+## Functions
+
++ Functions application is decomposition of code
+
+### Definition
+
++ Function can be defined as variable (type will be `object`)
+
+```
+var square = function(x){
+    return x * x;
+}
+```
+
++ Definition contains
+    + Variable name for further using
+    + Keyword `function`
+    + Set of parameters in parenthesis
+    + Body of function in braces
+
+### Parameters and Scopes
+
++ JS use call-by-sharing strategy for passing parameters
+    + Parameters with simple type will be copies of passed variables
+    + Parameters with type `object` will be references
+        + If change reference then real variable will not be changed
+        + If you'll change property of object it will affect real variable
++ Variables declared by `var` can be used only inside function 
+    where it was declared
++ Variables declared by `let` can be used only inside `{}` block
+    + If you declare `var` variable inside `if` block in function it will be
+        accessible in next sentences even after `if` block. When you use `let`
+        for declaring this variable will be accessible only in `if` block
++ Variables declared outside any function is global (can be used anywhere)
++ Global variables is evil in most cases
++ Variables declared by `var` and `let` can be used in nested functions (lexical scoping)
+
+### Function as Values
+
++ Function variables can be
+    + Passed as parameter
+    + Reassigned
+    + Used in arbitrary expression
+    + etc
+
+### Declaration Notation
+
++ Function can be declared without `var` or `let`
++ Difference is possibility to use function before declaration
+
+```
+console.log(square(3));
+
+function square(x){
+    return x * x
+}
+```
+
+### The Call Stack
+
++ For storing local variables and current 
+    place of code execution JS use a call stack
++ Every time when nested function is invoked new entry 
+    appears in stack for it's scope. After execution of 
+    this function current entry is removing, previous entry 
+    becoming current and function of this entry continue it's execution
+    + This is two functions example but it can contains any 
+        amount of nested functions. Limit is defined by size 
+        of stack for this programm

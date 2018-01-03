@@ -21,6 +21,7 @@
 ### [Well grounded Java development](java-ee/WELL-GROUNDED-JAVA-DEV.md)
 ## JavaScript
 ### [Eloquent JavaScript](js/ELOQUENT_JAVASCRIPT.md)
+### [JavaScript Design Patterns](js/JS_DESIGN_PATTERNS.md)
 ## NodeJS
 ### [NodeJS tutorial](nodejs/NODEJS-TUTOR.md)
 ### [Practical NodeJS](nodejs/PRACTICAL-NODEJS.md)
