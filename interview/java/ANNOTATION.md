@@ -1,73 +1,64 @@
 # Annotation
 
-+ Метатеги для кода, изменяющие поведение кода
++ Annotations is meta information tags 
+    for adding and changing behavior of code
 
-+ Применимы к
-    + Пакет
-    + Класс
-    + Конструктор
-    + Метод
-    + Поле
-    + Параметр
-    + Локальная переменная
++ Features
+    + Additional information for compiler
+    + Information for external tools for
+        + Code generation
+        + Configuration
+        + etc
+    + Can be used at runtime
 
-+ Функции
-    + Предоставление доп информации для компилятора
-    + Предоставление информацию внешним инструментам для доп действий (генерация кода,
-        конфигурация и т.д.)
-    + Может использоваться во время выполнения кода
-
-+ Самая частая аннотация - @Override
++ Most known annotation - @Override
 
 + @Retention
-    + применима к другим аннотациям
-    + указывает жизненный цикл аннотации
+    + Can be applied to another annotation
+    + Determine life cycle of annotation
 + @Documented
-    + маркер интерфейс, который указывает что аннотация должна быть
-        задокументирована
+    + Marks that annotation must be documented
 + @Target
-    + применима к другим аннотациям и указывает, к каким объектам она
-        может быть применена
-    + тип объекта определяется из ElementType
+    + Can be applied to another annotation
+    + Determine for what elements annotation can be applied
+    + Type of element can be set by ElementType parameter
         + FIELD
         + LOCAL_VARIABLE
-        + и т.д.
+        + etc
 + @Ineherited
-    + аннотация маркер для других аннотаций
-    + определяет что аннотация будет унаследована классами потомками
+    + Can be applied to another annotation
+    + Annotation will be inherited by descendant classes
 + @Override
-    + применяется только к методам
-    + проверяет что метод переопределен
+    + Can be applied only for methods
+    + Checks that method is overriden (class ancestor has the same method)
 + @Deprecated
-    + маркер устаревших объявлений, которые должны быть заменены
+    + Marks that functional is deprecated and must not be used
 + @SafeVarargs
-    + применимо к методам и конструкторам с переменным количеством
-        параметров, объявленных как static или final
-    + указывает что для передаваемых параметров запрещены небезопасные
-        действия
+    + Can be applied to static and final methods and constructors with 
+        variable count of parameters
+    + Deny to use unsafe actions for parameters
 + @SuppressWarnings
-    + подавляет предупреждения компилятора
+    + Suppresses warnings from compiler
 
-+ Жизненный цикл аннотации
-    + задается RetentionPolicy
++ Life cycle of annotation
+    + Can be set by RetentionPolicy parameter
     + SOURCE
-        + содержатся только в исходном файле и отбрасываются при
-            компиляции
+        + Exists only in sources and will be removed at compilation
     + CLASS
-        + сохраняются в файле но недоступны при выполнении
+        + Exists in class files but will be removed at start of application
     + RUNTIME
-        + сохраняются в файле и доступны во время выполнения
+        + Exists even in runtime
 
-+ Элементы к которым применимы аннотации
-    + @Target(ElementType.PACKAGE)
-    + @Target(ElementType.TYPE)
-    + @Target(ElementType.CONSTRUCTOR)
-    + @Target(ElementType.METHOD)
-    + @Target(ElementType.FIELD)
-    + @Target(ElementType.PARAMETER)
-    + @Target(ElementType.LOCAL_VARIABLE)
-    + могут быть перечислены через запятую
-        + @Target({ElementType.PACKAGE, ElementType.FIELD})
++ Annotations can be applied to
+    +  `@Target(ElementType.PACKAGE)`
+    +  `@Target(ElementType.TYPE)`
+    +  `@Target(ElementType.CONSTRUCTOR)`
+    +  `@Target(ElementType.METHOD)`
+    +  `@Target(ElementType.FIELD)`
+    +  `@Target(ElementType.PARAMETER)`
+    +  `@Target(ElementType.LOCAL_VARIABLE)`
+    + Can be determined several types
+        +  `@Target({ElementType.PACKAGE, ElementType.FIELD})`
 
-+ Создание аннотации
-    + public @interface AnnotationName{String info() default ""}
++ Annotation creation
+    +  `public @interface AnnotationName{String info() default ""}`

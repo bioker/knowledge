@@ -1,20 +1,19 @@
-Spring Documentation
---------------------
+# Spring Documentation
 
 + [Back](README.md)
 
-# Part I. Overview of Spring Framework
+## Part I. Overview of Spring Framework
 
 + Это легковесное решение для веб приложений
 + Засчет модульной архитектуры к проекту подключается только то что нужно
 + Предполагает изолированность от бизнес логики приложения
 
-## 1. Getting Started with Spring
+### 1. Getting Started with Spring
 
 + Если обучение Spring только начинается то лучше будет начать с Spring Boot
 + Spring Boot направлен на скорость создания приложения
 
-## 2. Introduction to the Spring Framework
+### 2. Introduction to the Spring Framework
 
 + Spring это фреймворк с обширным функционалом, который помогает разрабатывать
     веб приложения, фокусируясь на задачах приложения а не технических деталях
@@ -26,7 +25,7 @@ Spring Documentation
     + Создавать методы для обработки сообщений без использования JMS API
     + Создавать методы управления выполнением без использования JMX API
 
-### 2.1 Dependency Injection and Inversion of Control
+#### 2.1 Dependency Injection and Inversion of Control
 
 + В любом java приложении логика построена на компонентах-классах
 + Между компонентами существуют различного рода зависимости
@@ -38,7 +37,7 @@ Spring Documentation
     about Inversion of Control (IoC) on his site in 2004. Fowler suggested renaming the principle to
     make it more self-explanatory and came up with Dependency Injection.
 
-### 2.2 Framework Modules
+#### 2.2 Framework Modules
 
 + Spring состоит из функций организованных примерно в 20 модулей
 + Примерная структура модулей
@@ -64,7 +63,7 @@ Spring Documentation
         + SpEL
     + Test
 
-#### 2.2.1 Core Container
+##### 2.2.1 Core Container
 
 + Состоит из
     + spring-core
@@ -102,7 +101,7 @@ Spring Documentation
         + получать доступ к объектам по имени из IoC контейнера
         + прозрачную выборку и проекцию списков
 
-#### 2.2.2 AOP and Instrumentation
+##### 2.2.2 AOP and Instrumentation
 
 + Модуль spring-aop предоставляет реализацию аспектно-ориентированного
     программирования помогающюю к примеру реализовывать методы перехватчики
@@ -114,12 +113,12 @@ Spring Documentation
     с классами и их загрузкой (Classloaging)
 + Модуль spring-instrument-tomcat содержит инструменты для работы с tomcat
 
-#### 2.2.3 Messaging
+##### 2.2.3 Messaging
 
 + Модуль spring-messaging предоставляет абстракцию для создания приложений
     архитектура которых базируется на обмене сообщениями
 
-#### 2.2.4 Data Access/Integration
+##### 2.2.4 Data Access/Integration
 
 + Содержит модули для работы с технологиями
     + JDBC
@@ -150,7 +149,7 @@ Spring Documentation
 + Модуль spring-jms для поддержки Java Messaging Service, с версии 4.1 это
     предоставляется в модуле spring-messaging
 
-#### 2.2.5 Web
+##### 2.2.5 Web
 
 + Содержит модули
     + spring-web
@@ -167,7 +166,7 @@ Spring Documentation
 + Модуль spring-webmvc-proflet используется для отображения Proflet? среды на
     webmvc модуль
 
-#### 2.2.6 Test
+##### 2.2.6 Test
 
 + Интеграция с Unit и Integration тестированием поддерживая JUnit и TestNG
     + Предоставляет возможность тестировать ApplicationContext и пр.
