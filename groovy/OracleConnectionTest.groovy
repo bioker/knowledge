@@ -1,9 +1,11 @@
 #!/usr/bin/env groovy
+
+@Grab(group='com.oracle', module='ojdbc6', version='11.2.0')
 import java.sql.DriverManager
 import java.sql.Connection
 import java.sql.SQLException
 
-if (args.size() != 3) }
+if (args.size() != 3) {
     throw new NullPointerException("connectionString, user, password not passed")
 }
 
