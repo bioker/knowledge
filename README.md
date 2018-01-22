@@ -16,4 +16,5 @@
 ## [Oracle](oracle/README.md)
 ## [React](react/README.md)
 ## [Spring](spring/README.md)
+## [Scala](scala/README.md)
 ## [Teaching](teaching/README.md)
