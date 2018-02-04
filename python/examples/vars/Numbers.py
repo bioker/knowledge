@@ -1,0 +1,10 @@
+#!/usr/bin/env python3.5
+print('Numbers:')
+print(20 + 2)
+print(20 - 2)
+print(20 * 2)
+print(20 ** 2)
+print(20 / 3)
+print(20 // 3)
+print(20 % 3)
+print(20 + 2.0)
