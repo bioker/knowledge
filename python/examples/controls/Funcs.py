@@ -38,3 +38,16 @@ def func4(a, b=2, c=3):
     print('c:', c)
 print('Arguments can be passed by name')
 func4(1, c=4)
+
+print('Array can be passed as arguments list')
+func4args = [6,7,8]
+func4(*func4args)
+
+print('Arguments can be declared as array')
+def func5(*args):
+    print(args)
+func5(1,2,3)
+
+print('Arguments can be delivered as dictionary')
+func4_args_dict = {"a":4,"b":5,"c":1}
+func4(**func4_args_dict)
