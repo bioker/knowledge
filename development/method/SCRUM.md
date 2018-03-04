@@ -4,7 +4,13 @@
 
 + *Stakeholder* - person who is interested in some features implementation
 + *Product Owner* - person who is responsible for vision of project
+    + He or she knows what is project for and what is 
+        most important for success of it
+    + He or she choose what and when will be done based on value and costs
 + *Scrum Master* - person who is responsible for development team
+    + He or she protects
+        + The development team from distractions
+        + The *Scrum* process from violation of rules
 + *Development Team* - people who is responsible for development
     + Size of team is average of 5-9 people
     + Roles in team:
@@ -31,11 +37,14 @@
 
 + *User Story* - description of the feature in customer language
     + Story need to be short and concrete
-    + 
+    + Story need to have *Acceptance Criteria*
+
++ *Acceptance Criteria* - list of conditions to make sure, that the 
+    feature is implemented completely
+    + It needs to be determined before start of implementation
+    + It must not contains implementation details (answer the question **What** but not **How**)
 
 + *Sprint backlog* - list of features that need to be implemented during *Sprint*
-    + Element of list is *Sprint Story*
-    + The each element need to be separated to tasks
+    + Element of list is *User Story* taken from *Project Backlog*
+    + The each element needs to be separated to tasks
     + Every day command evaluates remaining volume of work for tasks completion
-
-+ *
