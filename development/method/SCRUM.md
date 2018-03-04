@@ -38,13 +38,25 @@
 + *User Story* - description of the feature in customer language
     + Story need to be short and concrete
     + Story need to have *Acceptance Criteria*
+    + Story is estimated by *Story Point*
+    + Story is separated to number of *Task*
 
 + *Acceptance Criteria* - list of conditions to make sure, that the 
     feature is implemented completely
     + It needs to be determined before start of implementation
     + It must not contains implementation details (answer the question **What** but not **How**)
 
++ *Story Point* - a number that showing  how much effort need to be spend 
+    to implement the *User Story* feature
+    + Example of factors
+        + The amount of work to do
+        + The complexity of the work
+        + Any risk or uncertainty in doing the work
+
++ *Task* - part of work to implement the *User Story* feature that  
+    will be performed by one person
+
 + *Sprint backlog* - list of features that need to be implemented during *Sprint*
-    + Element of list is *User Story* taken from *Project Backlog*
+    + Element of list is *Task*
     + The each element needs to be separated to tasks
     + Every day command evaluates remaining volume of work for tasks completion
