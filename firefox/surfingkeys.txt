@@ -4,3 +4,4 @@ map("H", "S");
 map("L", "D");
 map("o", "t");
 map("t", "on");
+map("F", "cf");
