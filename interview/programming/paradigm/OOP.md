@@ -4,40 +4,56 @@
 
 ## Principles
 
-### Abstraction
+### Abstraction 
 
-+ Определение значимых свойств объекта и исключение не значимых
+> The process of excluding non-important properties from some object and focusing on
+> essential characteristics related to a task. Helps to form the right class definition.
 
-### Encapsulation
+### Encapsulation 
 
-+ Сокрытие сложности реализации, представляя необходимый интерфейс
+> The process of hiding the complexity of an implementation. Providing the clear and
+> understandable interface for a client.
 
-### Inheritance
+### Inheritance 
 
-+ Определение общих свойств и методов для потомков
+> The possibility for a class to have an ancestor. The descendant class will have same
+> properties and behavior as the ancestor.
 
-### Polymorphism
+### Polymorphism 
 
-+ Один интерфейс - множество методов (для разных классов)
+> The possibility for different classes, that share a single interface, be treated with
+> similar way. It allows changing the processing logic at runtime.
 
-+ Динамическое связывание
-    + Используя вызов интерфейса мы можем во время выполнения
-        менять поведение, подставляя нужную реализацию
+## Techniques
 
-## Relationship
+### Method Overloading (the form of Polymorphism) 
 
-### Inheritance(Is a)
+> There are several methods with the same name and
+> different parameters. The compiler can determine what exactly method will be invoked based on the
+> type of parameters.
 
-+ When class must have all behavior of another (maybe with changes - redefinition)
+### Method Overriding (the form of Polymorphism) 
 
-### Association(Has a)
+> When the class that shares some interface (inherit
+> some class) overrides the base behavior. The logic of processing can be changed at runtime with this
+> technique by using the different type of implementations. 
 
-+ Relationship between classes - one two one, one to many, etc
+## Relationships
 
-#### Composition
+### Inheritance 
 
-+ Часть не может существовать самостоятельно (создается внутри объекта контейнера)
+> The object of one class is descendant of an object of another class.
 
-#### Aggregation
+### Association 
 
-+ Часть может существовать самостоятельно (передается как параметр конструктора или через сеттер)
+> The object of one class can be related with one or more objects of another class.
+
+### Aggregation 
+
+> The object of one class can own object of another class but their lifecycles are
+> independent.
+
+### Composition 
+
+> The object of one class can own object of another class and this dependent class can
+> exist only with the owner.
