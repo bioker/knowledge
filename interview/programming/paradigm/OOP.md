@@ -2,6 +2,24 @@
 
 + [Back](../PARADIGM.md)
 
+## Terms
+
+### Object
+
+> Material entity with some state and pre-defined behavior.
+
+### Class
+
+> Non-material definition of an object. Describes what object consists of and how it behaves.
+
+### Field
+
+> The attribute of an object. Describes some part of object's state.
+
+### Method
+
+> The one of interfaces to interact with an object. Describes what client can do with it.
+
 ## Principles
 
 ### Abstraction 
@@ -12,17 +30,17 @@
 ### Encapsulation 
 
 > The process of hiding the complexity of an implementation. Providing the clear and
-> understandable interface for a client.
+> understandable interface for a client. Helps to create right method definition.
 
 ### Inheritance 
 
 > The possibility for a class to have an ancestor. The descendant class will have same
-> properties and behavior as the ancestor.
+> properties and behavior as the ancestor. Helps to form the right classes hierarchy.
 
 ### Polymorphism 
 
 > The possibility for different classes, that share a single interface, be treated with
-> similar way. It allows changing the processing logic at runtime.
+> similar way. Allows to change the processing logic at runtime.
 
 ## Techniques
 
