@@ -2,6 +2,7 @@
 
 + [Back](../README.md)
 
+## [Shortcuts](https://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity)
 ## [Basics](bash.sh)
 ## [SED](sed/README.md)
 
