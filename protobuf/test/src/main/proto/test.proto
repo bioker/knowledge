@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package net.bioker;
+option java_multiple_files = true;
+
+message Greeting {
+    string name = 1;
+}
+
+message Empty {
+
+}
+
+service Greeter {
+    rpc greet(Greeting) returns (Empty);
+}

@@ -1,0 +1,55 @@
+plugins {
+    id "java"
+    id "com.google.protobuf" version "0.8.6"
+}
+
+group "net.bioker"
+version "0.1.0"
+
+sourceCompatibility = 1.8
+
+def grpcVersion = "1.14.0"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile("io.grpc:grpc-netty-shaded:$grpcVersion")
+    compile("io.grpc:grpc-protobuf:$grpcVersion")
+    compile("io.grpc:grpc-stub:$grpcVersion")
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.5.1-1"
+    }
+    plugins {
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion"
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs "build/generated/source/proto/main/grpc"
+            srcDirs "build/generated/source/proto/main/java"
+        }
+    }
+}
+
+task generatePythonSources(type:Exec){
+    commandLine "python", "-m", "grpc_tools.protoc", 
+    "-I./src/main/proto",
+    "--python_out=./src/main/python", 
+    "--grpc_python_out=./src/main/python",
+    "./src/main/proto/test.proto"
+}
