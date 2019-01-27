@@ -16,6 +16,7 @@
 ## [NodeJS](nodejs/README.md)
 ## [Oracle](oracle/README.md)
 ## [Pyton](python/README.md)
+## [RabbitMQ](rabbitmq/README.md)
 ## [React](react/README.md)
 ## [Spring](spring/README.md)
 ## [Security](security/README.md)
