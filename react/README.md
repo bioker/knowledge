@@ -1,3 +1,0 @@
-# React
-
-+ [Back](../README.md)

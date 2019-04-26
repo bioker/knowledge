@@ -1,9 +1,0 @@
-*.iml
-.idea
-build
-.gradle
-out
-*.swp
-*.pyc
-src/main/python/test_pb2.py
-src/main/python/test_pb2_grpc.py
